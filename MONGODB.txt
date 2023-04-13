@@ -1,0 +1,48 @@
+MONGO AND MONGOD 
+
+TO START THE MONGO DB : two method 1st by cmd : type mongosh and if it works then go ahead with your mongodb commands or if it now workd search service in your compute and manualy start mongdb server from there  | 2nd method : open compass and connect to a local host from there also 
+To connect with cloud mongo atlas : go to atlas website the chose the cluster and try to connect with compass with given link in atals and paste it on compass 
+
+MONGO: mongo is command line instruction or tool that allow user to intract with mongod 
+MONGOD: mongod is actually process wich intract with server and handle tha database and other operation it is responsible for all operations and task that is going to be on mongodb database . ( MONGO SEND THE COMMAND TO MONGOD AND MONGOD TAKES THE ACTION AGAINS THE SENT COMMANDS IT IS A SERVICE )
+
+
+{ 
+name : "Akshay",     ( value can be any type string, int, float , array, object ) 
+score : 44,
+value : False
+licenece : null,
+array: [ "name" , "age", "dob"],
+myobj : { "name" : "akshay" , "age" : 23, "dob" : "29-06-1999" } 
+}
+
+MONGODB HAS 3 ITEMS 
+COLLECTION ( Tables)  : collection of many objects ( Bson: just like json but have many type of data type ) called collection in mongodb
+DOCUMENT (ROWS) : single object is called a document here ( ONE UNIT OF A DATA INSIDE A TABLE OR COLLECTION ) 
+FIELD (COLUMNS): These are the key of onject for example ( name, score, licence, array, myobj all are fields of this document and ( akshsy, Flase, null, 44... ) are values of these fields )
+
+
+in mongodb you can add n no of key-value pair which is not allowed in msql db
+to open the mongoshell type mongosh in cmd 
+
+COMMAND IN MONGODB DATABASE 
+show dbs; : veiw all database 
+use {dbName} : create a new db or switch no onther db
+db :  to check current database or to check in which database you are in 
+db.dropDatabase() : run this to delete current database for that you have to run db cmd first to check current db
+
+COMMAND IN MONGODB COLLECTIONS 
+show collections : VIEW ALL COLLETIONS INSIDE A DATABASE
+db.createCollection('collectionName') : TO CREATE A NEW COLLECTION INSIDE A DATABASE
+db.{collectionName}.drop() : TO DELETE THE COLLETION 
+db.{collectionName}.insert({ 'film' : ' Don2', 'Actor' : 'Shahrukh khan', 'Genres': 'Action' }) : TO ADD A SINGLE ROW ( DOCUMENT/OBJECT) INSIDE A COLLECTION 
+collection name should be withou space 
+db.{collectionName}.insert([{ 'film1' : ' Don2', 'Actor1' : 'Shahrukh khan', 'Genres1': 'Action' }, { 'film2' : ' Iron Man', 'Actor2' : 'Robert Downey Junior', 'Genres2': 'Action/Sci-Fi' }]) : TO ADD A MANY ROW ( DOCUMENT/OBJECT) INSIDE A COLLECTION 
+db.{collectionName}.find() :  TO SEE ALL ROWS OF A COLLECTION
+db.{collectionName}.find({film : ' Don2'}) : TO SEARCH THE ROW USING FIELD-VALUES 
+db.{collectionName}.find().limit(2) : TO SHOW THE LIMITED ( EG : 2) ROWS 
+db.{collectionName}.find().count()  : TO COUNT THE TOTAL ROWS PRESENT IN THE TABLE
+db.{collectionName}.findOne({film : ' Don2'}) :  TO FIND THE FIRST ROW WITH FILE: DON2 
+db.{collectionName}.update({film : ' Don2'},{$set: { film :'don'}})  : TO UPDATE THE REQUIRED COLOUM AND MULTIPLE COULUMNS CAN BE UPDATED 
+
+MONGODB ATLAS IS USED FOR CLOUD DATABASE

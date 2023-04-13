@@ -1,0 +1,40 @@
+
+JSON : JAVA SCRIPT OBJECGT NOTATION 
+
+INTEGRATED WITH JAVASCRIPT 
+LIGHWEIGHT LANGUAGE
+JSON IS LIKE KEY-VALUE PAIRS 
+JSON IS JUST LIKE JAVASCRIPT OBJECT 
+SINGLE QUOTE NOT ALLOWED 
+DOUBLE QUOTE ONLY ALLOWED 
+JSON IS NESTED MEANS IT CAN CONTAIN OBJECT INSIDE ARRAY AND ARRAY INSIDE OBJECT AND SO ON
+
+EXAMPLE OF JSON
+
+{ 
+"name" : "Akshay",     ( value can be any type string, int, float , array, object ) 
+"score" : 44,
+"value" : False
+"licenece" : null,
+"array": [ "name" , "age", "dob"],
+"myobj" : { "name" : "akshay" , "age" : 23, "dob" : "29-06-1999" } 
+}
+
+in above name, score  and value are keys and akshay, 44, False are values 
+a value can be array and object also 
+THIS JSON FILE CAN BE PARSED INTO JS OBJECT EXMAPLE BELOW using backtick 
+
+myjson = `{ 
+"name" : "Akshay",     ( value can be any type string, int, float , array, object ) 
+"score" : 44,
+"value" : False
+"licenece" : null,
+"array": [ "name" , "age", "dob", {"a", "b", "hello", 8}],
+"myobj" : { "name" : "akshay" , "age" : 23, "dob" : "29-06-1999", "arru" :  ["kallu",5, False, "ju"] } 
+}
+`
+THEN TYPE JSON.parse(myJson);
+this will parsed the json into js object 
+and we can directly store this data inside a vaiable
+
+parsed = JSON.parse(myJson);

@@ -1,0 +1,36 @@
+ 
+ Steps to Push a new repository on github ( run these commands on cmd / git bas/ any terminal)
+
+ 1. open root foleder on terminal and type below commands
+ 2. git init : To Create a git repo or it convert the exiting repo into git repo or initialize the repo 
+ 3. git add . : this tracks the all changes made on repo and add them a stage area before they are commit 
+ 3.1. git status : to check status 
+ 4. git commit -m "commit name": to give a name to a push 
+ 5. create a repo on github web and copy the path url from there
+ 6. git remote add origin url : to add the origin where the repo is going to be push and fetch
+ 7. git remote -v : to check the current orgin 
+ 8. git push origin master : finally push the repo on a given origin or onto github web repo
+
+
+ step to push any changes onto git
+
+ 1. git add .
+ 2. git commit -m "commit name"
+ 3. git push origin master 
+
+
+
+
+ DEPLOYMENT OF REACT APP AFTER DEVELOPMENT IS DONE 
+
+ follow the below command
+
+ first push the repo on github and goto setting and on gh-pages select path gh-pages then follow below steps
+
+ 1. npm run build
+ 2. "homepage":"https://githubusername.github.io/app-name" : add this line in package.json file on the top of all line
+ 3. npm install --save gh-pages : this will install the package that help to create the github pages for deployment 
+ 4. "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",   : add these two lines in script in package.json file 
+5. npn run deploy : last cmd that deploy the project 
+

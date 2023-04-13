@@ -1,0 +1,166 @@
+CSS NOTES 
+
+SELECTORS :  are used to target html element in css 
+# for select id 
+. for select class 
+span, div, section are for select tag 
+
+
+COLOR : is used to define text color 
+
+color type in css 
+ color : rgba(1,1,1, 0.6);  : rgba stand for red green blue and alpha ( value 0-1) 
+ color : #ff4533;  : hex value
+ color :  8, 90%, 70%;  hsl stand for hue saturation lightness 
+
+
+BACKGROUND PROP 
+Background-image : url("akshy.jpg"); 
+background-repeat : repeat-x, repeat-y, no-repeat, space, round 
+background-size : cover, contain, auto, width ( height width : 400px 300px)
+backgroud-position : left center right and top bottom  or 5% 75%;
+background-attached : fixed, scroll, local, :   
+backgoud : red url("akshy.jpg")  repeat-x fixed cover left center ( shortcut for all above props )
+
+
+BOX MODEL IN CSS 
+M : margin
+B  :  border 
+P  :  padding
+C  :  content
+
+.container{
+margin : 2px;
+border: 3px solid red;
+padding : 4px;
+} 
+height = conent + padding + border + margin ( top+ right+bottom+left)
+total height =  content + 4px + 4px + 3px + 3px + 2px + 2px
+padding margin and border are calculated of top and bottom for height and similarly left right for width
+padding : 0 0 0 0; ( top right buttom left ) clock wise similary for margin 
+padding : 0 0; ( top-bottom left-right) 
+padding : 0; ( top bottom left right = equallly ) 
+
+BORDER-STYLE
+border-width : 1px;
+border-style : solid;
+border-color : green;
+border : 1px solid rgba( 0,0,0,0.1) { rgba ( red,green,blue, opacitiy) } : shortcut to use all above prop
+border-radius : 3px; :  used to give radius to a border equally 
+
+
+MARGIN-COLLAPES : 
+.box1{
+margin : 10px;
+}
+box2{
+margin : 20px;
+}
+When two element are rendered on a webpage in a vertical manner and have given their margin then the margin that collapes ( box1-bottom COLLAPES WITH box2-top ) is set to be common which is  greater from both  means in above written  case for box1 and box2 the common margin is set to be 20px for above boxes because it is greater than 10px; 
+
+
+BOX - SIZING 
+.box1{
+width : 100px;
+}
+box2{
+width : 100%;
+padding: 2px;
+border: 3px solid greay;
+box-sizing: content-box or border-box;;
+}
+box-sizing include only border and padding to set the box size not marging included
+
+box-sizing: content-box = it allow to overflow the box2 which is a child container over the parent element that is box 1  ( padding and border is not included ) 
+box-sizing: border-box =  it help to not overflow the box 2 with box 1, means it fitted with box 1 : to fit the child container inside parent container  ( padding and border is included ) 
+
+
+DISPLAY 
+
+their is two level of element in html : 
+block level 
+and inline level
+display : inline, block, 
+INLINE : takes fixed or requires space by element, cant set width/height/ (margin): left-right margin  allowed top bottom not works), It allows other element to display before of after 
+
+BLOCK : have full vw ( view point width ) contains full width horizontally or contain full row width new element can only be displayed in new line 
+
+INLINE-BLOCK: similary with inline but width/height/margin/padding can be set for element 
+
+display:none = element is removed from dom 
+display : hidden = element is hidden but not removed width and height is reserved 
+
+
+DIV:  IS A BLOCK ELEMENT BY DEFAULT AND ALSO ALL ELEMENT ARE BLOCK BY DEFUALT 
+SPAN : is inline element by defualt 
+
+ALL ELEMENTS ARE IN HTML IS A BLOCK ELEMENT BY DEFAULT
+
+
+TEXT 
+text-align: start, end, left, right, center, justify;
+( only work on text content  not works on div , like paragraph heading etc it help to align text left right or center or justify ) 
+text-decoration: underline, dottedline , etc; ( it helps to decorates the text with line  )
+text-transform: uppercase , lowercase, sentencecase, Capitalize , etc; (  it help to change the case of text ) 
+
+LINE-HEIGHT
+line-height: 2px; ( it helps to give the gap between lines) 
+
+
+FONTS
+font-size: 12px; : help to manage the font size
+font-family: ubuntu, 'Courier New', courier, monospace; : it will select any one family from given families
+and google font also can be used for  the same
+font-style: italic, etc
+font-vairant
+font-weight
+
+
+Note: while using inline-block prop for two element given width 50% to each, a problem occures that there is a little space created between them to remove that space dont write div in next line write the next div just after the first div ends in html
+
+
+SIZE-UNITS
+
+font-size: 2px, 2em, 2rem, 2vh, 2vw,
+
+em : relative to parent font size ( 2em means 2* parent font size) 
+rem:  related to html predefined font size or root font size 
+vh: relative to viewport height  ( 1vh : 1% of view port height ) 
+vw:  relative to viewport width ( 1vw : 1% of view port width) 
+% : relative to parent element ( 1% : 1% of parent element size) 
+
+min-width/height: minimum width /height is fixed cant exceed after min limit 
+max-width / height : max  width /height is fixed cant exceed after max limit
+
+
+
+POSITIONING  : by default every element is statically setted( position:static)by default
+
+used to manipulate the location of element over screen 
+
+position : static; ( element is set with flow of html structure, not allows changes in  postion : top/bottom/left/right values will not work ) 
+position : relative  ( allow changes in  postion : top/bottom/left/right values will work here and if not top/left...... values are not given then it behave like static   ) 
+position : absolute ( element is removed from flow of structure and its position is relative or obey to its first non-static ( parent element should be positioned : relative )  ancestor ( parent of parents of parent div :  ) allow changes in positon)
+position : fixed  (  similar with absolute,  relative to  browser window postion is fixed while scroll and allow changes in postion  ) 
+position : sticky  ( it is used to make nav bar sticky ) 
+z-index: 1 ( the element that has max value of z index will appear on above while overflow or overlaping ) or specify the stack order of a element 
+
+A DIV CAN BE SET IN CENTER BY GIVEN BELOW CODE 
+margin: auto; ( it will set margin automatically in left and right side ) 
+
+list-style: square inside url('men.jpg') ( type, positon, image) : used in ul or li to specify the type of style
+here position tell us that bullet point will appear inside the ul div or outside of ul div 
+
+
+
+
+
+
+Alt + z to wrap text in vs code : used in lorem 34
+
+m0 is shortcut for marging :0; and similar p0 is for padding and m0+p0 can be used for margin and padding 
+css properties are key value pair like margin : 10px; where margin is key and value is 10px
+
+
+css style formate
+to create multiple list in html then type : "li * 4" for four list items
